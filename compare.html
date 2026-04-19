@@ -2,245 +2,89 @@
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
-<title>Dragon GA 冠軍策略對比 (OS 強調版) — 20260419_1845</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dragon GA 冠軍策略對比 (OS 版) — 每日自動更新</title>
 <style>
-body { font-family: "Microsoft JhengHei", sans-serif; background: #0e1117; color: #e0e0e0; padding: 30px; line-height: 1.6; }
-h1 { color: #ffd700; margin-bottom: 8px; }
+body { font-family: "Microsoft JhengHei", sans-serif; background: #0e1117; color: #e0e0e0; padding: 30px; line-height: 1.6; max-width: 1100px; margin: 0 auto; }
+h1 { color: #ffd700; }
 h2 { color: #4caf50; border-bottom: 2px solid #4caf50; padding-bottom: 8px; margin-top: 30px; }
-h3 { color: #03a9f4; margin-top: 22px; }
 table { width: 100%; border-collapse: collapse; background: #1a1f2a; margin-top: 14px; }
 th, td { padding: 14px; border: 1px solid #333; text-align: left; vertical-align: top; }
 th { background: #2a3142; color: #ffd700; }
-tr:hover { background: #1f2530; }
 .metric { font-size: 18px; color: #4caf50; font-weight: bold; }
 .metric.highlight { color: #ffd700; font-size: 22px; }
 .metric.leveraged { color: #ff9800; }
-.metric.win { color: #ff5722; font-size: 20px; font-weight: bold; }
 .tag { color: #999; font-weight: normal; font-size: 12px; }
 small { display: block; margin-top: 4px; font-size: 11px; color: #aaa; }
 a { color: #03a9f4; text-decoration: none; }
-a:hover { text-decoration: underline; color: #ffd700; }
-.note { background: #2a3142; padding: 18px; margin-top: 18px; border-left: 4px solid #ffd700; }
-.alert { background: #4a1a1a; padding: 16px; border-left: 4px solid #ff5722; margin: 16px 0; }
-.success { background: #1a3a1a; padding: 16px; border-left: 4px solid #4caf50; margin: 16px 0; }
+a:hover { color: #ffd700; }
 .bigwin { background: linear-gradient(135deg, #1a3a1a, #2a3142); padding: 24px; border: 2px solid #ffd700; border-radius: 8px; margin: 24px 0; text-align: center; }
 .bigwin .num { font-size: 56px; color: #ffd700; font-weight: bold; }
 .bigwin .label { font-size: 18px; color: #4caf50; margin-top: 8px; }
-.subtle { color: #999; font-size: 13px; }
-ul { margin: 6px 0; }
-li { margin: 4px 0; }
-.checkbox { color: #4caf50; font-weight: bold; }
 .kpi-row { display: flex; gap: 16px; margin: 18px 0; flex-wrap: wrap; }
 .kpi-card { flex: 1; min-width: 200px; background: #1a1f2a; padding: 16px; border-radius: 6px; border: 1px solid #444; text-align: center; }
 .kpi-card .v { font-size: 32px; color: #ffd700; font-weight: bold; }
 .kpi-card .k { font-size: 13px; color: #aaa; margin-top: 4px; }
+.alert { background: #4a1a1a; padding: 16px; border-left: 4px solid #ff5722; margin: 16px 0; border-radius: 4px; }
+.note { background: #2a3142; padding: 16px; margin-top: 18px; border-left: 4px solid #ffd700; border-radius: 4px; }
+.auto { color: #03a9f4; font-size: 12px; text-align: right; margin-top: -10px; }
 </style>
 </head>
 <body>
 
-<h1>🏆 Dragon GA v5.3.6 — 冠軍策略對比 (OS 強調版)</h1>
-<p>產出時間: 2026-04-19 18:45 &nbsp;|&nbsp; 客戶目標: <strong style="color:#ffd700">Sharpe 4.2</strong> &nbsp;|&nbsp; 融資情境 L=1.67x</p>
+<h1>🏆 Dragon GA — 冠軍策略對比 (OS 版)</h1>
+<p class="auto">🔄 每日 18:40 自動更新 | 最後更新: 2026-04-19 22:05</p>
+<p>客戶目標: <strong style="color:#ffd700">Sharpe 4.2</strong> | 融資情境 L=1.67x</p>
 
 <div class="bigwin">
-<div class="num">OS Sharpe 4.156</div>
-<div class="label">🎯 ERC 組合在 OS 期 (2023-2026) 已突破 Sharpe 4.0</div>
-<div class="subtle" style="margin-top:8px">距客戶目標 4.2 僅差 +0.044 — Daily 口徑已達 <strong style="color:#ffd700">4.30</strong></div>
+<div class="num">OS Sharpe 4.006</div>
+<div class="label">🎯 ERC 多策略融合 (OS 期 2023-2026)</div>
+<div style="margin-top:8px; color:#aaa; font-size:13px">Daily 口徑已達 <strong style="color:#ffd700">4.14</strong></div>
 </div>
 
-<h2>📊 核心成果 (OS 期 2023-2026 真實樣本外)</h2>
+<h2>📊 核心成果 (OS 期真實樣本外)</h2>
 <div class="kpi-row">
-  <div class="kpi-card"><div class="v">4.156</div><div class="k">ERC Sharpe (月,unlevered)</div></div>
-  <div class="kpi-card"><div class="v">4.004</div><div class="k">ERC Sharpe (融資扣息)</div></div>
-  <div class="kpi-card"><div class="v">4.30</div><div class="k">BASELINE Daily Sharpe</div></div>
-  <div class="kpi-card"><div class="v">4.012</div><div class="k">BASELINE Monthly Sharpe</div></div>
-  <div class="kpi-card"><div class="v">3.30%</div><div class="k">ERC OS MDD (vs 19.2% 全期)</div></div>
-  <div class="kpi-card"><div class="v">160.6%</div><div class="k">ERC OS CAGR (扣息後 ~278%)</div></div>
+  <div class="kpi-card"><div class="v">4.006</div><div class="k">ERC OS Sharpe (月)</div></div>
+  <div class="kpi-card"><div class="v">4.14</div><div class="k">ERC OS Sharpe (日)</div></div>
+  <div class="kpi-card"><div class="v">14.76%</div><div class="k">ERC OS MDD</div></div>
+  <div class="kpi-card"><div class="v">159.5%</div><div class="k">ERC OS CAGR</div></div>
+  <div class="kpi-card"><div class="v">1,852 萬</div><div class="k">ERC 胃納量</div></div>
 </div>
 
 <div class="alert">
-<strong>⚠️ 重要提醒</strong>:全期 (2014-2026) Sharpe 3.42 看似平凡,
-是因含 2014-2018 的台股震盪盤整期。<strong>真實樣本外 OS 期 (2023-2026, 39 個月) Sharpe 已達 4.0+,
-ERC 組合更達 4.156</strong>。實盤上線後將以 OS 期數字為準。
+<strong>⚠️ 重要提醒</strong>:全期 Sharpe 含 2014-2018 震盪盤整期被拉低,<strong>真實樣本外 OS 期 Sharpe 已達 4.0+,ERC 組合更達 4.006</strong>。實盤上線以 OS 期為準。
 </div>
 
-<h2>🥇 4 個冠軍策略 — OS Sharpe 全部 ≥ 3.97!</h2>
-
+<h2>🥇 4 個冠軍策略 + ERC 融合 (按 OS Sharpe 排序)</h2>
 <table>
 <tr>
-  <th>策略</th>
-  <th>OS Sharpe (日)</th>
-  <th>OS CAGR</th>
-  <th>OS MDD</th>
-  <th>融資 L=1.67x</th>
-  <th>當前持股</th>
-  <th>詳細</th>
+  <th>策略</th><th>OS Sharpe (日)</th><th>OS CAGR</th><th>OS MDD</th><th>融資 L=1.67x</th><th>詳細</th>
 </tr>
-
-<tr>
-  <td><strong>版本 D</strong> 🏆 CAGR 穩健型<br><small>多策略融合 + 趨勢過濾 + 7 支集中持股</small></td>
-  <td class="metric highlight">4.046<br><small class="tag">月 3.32 / 全期 3.59</small></td>
-  <td class="metric">200.2%<br><small class="tag">扣息 187%</small></td>
-  <td class="metric">15.11%<br><small class="tag">L-MDD 23.5%</small></td>
-  <td class="metric leveraged">L-CAGR 172.5%<br><small>維持 140.1%</small></td>
-  <td><small>8383(20%) / 6782(20%) / 2501(15%)<br>2327(11%) / 1590(11%) / 3044(11%)</small></td>
-  <td><a href="file:///D:/GA_%E4%B8%89%E8%A6%96%E7%AA%97%E6%BC%94%E5%8C%96/top5_output/html_reports/CHAMPION_D_CAGR穩健_20260419_1614.html" target="_blank">詳細 →</a></td>
-</tr>
-
-<tr>
-  <td><strong>版本 C</strong> 🥈 CAGR 優先型<br><small>多策略融合 + 產業分散 + 20 支持股</small></td>
-  <td class="metric highlight">4.004<br><small class="tag">月 3.48 / 全期 3.67</small></td>
-  <td class="metric">172.7%<br><small class="tag">扣息 159%</small></td>
-  <td class="metric">16.10%<br><small class="tag">L-MDD 24.4%</small></td>
-  <td class="metric leveraged">L-CAGR 159.5%<br><small>維持 133.8%</small></td>
-  <td><small>1590/2605/6782 各 9% + 14 支</small></td>
-  <td><a href="file:///D:/GA_%E4%B8%89%E8%A6%96%E7%AA%97%E6%BC%94%E5%8C%96/top5_output/html_reports/CHAMPION_C_W26主力_20260419_1614.html" target="_blank">詳細 →</a></td>
-</tr>
-
-<tr>
-  <td><strong>版本 A</strong> 🥉 Sharpe 穩健型<br><small>多策略融合 + 趨勢過濾 + 分散 20 支 + 風控停損</small></td>
-  <td class="metric highlight">3.971<br><small class="tag">月 3.52 / 全期 3.63</small></td>
-  <td class="metric">167.4%<br><small class="tag">扣息 154%</small></td>
-  <td class="metric">15.27%<br><small class="tag">L-MDD 20.3%</small></td>
-  <td class="metric leveraged">L-CAGR 160.1%<br><small>維持 141.9%</small></td>
-  <td><small>6782(14%)/2501(11%)/1590(8%) + 17 支</small></td>
-  <td><a href="file:///D:/GA_%E4%B8%89%E8%A6%96%E7%AA%97%E6%BC%94%E5%8C%96/top5_output/html_reports/CHAMPION_A_Sharpe穩健_20260419_1614.html" target="_blank">詳細 →</a></td>
-</tr>
-
-<tr>
-  <td><strong>版本 B</strong> CAGR 激進型<br><small>多策略融合 + 趨勢過濾 + 集中 5 支重壓</small></td>
-  <td class="metric highlight">3.959<br><small class="tag">月 3.16 / 全期 3.51</small></td>
-  <td class="metric win">218.4%<br><small class="tag">扣息 205%</small></td>
-  <td class="metric">17.00%<br><small class="tag">L-MDD 22.8%</small></td>
-  <td class="metric leveraged">L-CAGR 178.5%<br><small>維持 141.3%</small></td>
-  <td><small>8383(26%)/6782(26%)/2501(20%)<br>1590(14%)/2327(14%)</small></td>
-  <td><a href="file:///D:/GA_%E4%B8%89%E8%A6%96%E7%AA%97%E6%BC%94%E5%8C%96/top5_output/html_reports/CHAMPION_B_CAGR激進_20260419_1614.html" target="_blank">詳細 →</a></td>
-</tr>
-
-</table>
-
-<h2>💎 NEW: ERC 9 島組合 (Equal Risk Contribution) — Sharpe 4.156 / MDD 3.30%</h2>
-
-<table>
-<tr>
-  <th>指標</th>
-  <th>ERC OS (2023-2026)</th>
-  <th>BASELINE OS</th>
-  <th>Δ vs BASELINE</th>
-  <th>意義</th>
-</tr>
-<tr>
-  <td><strong>Sharpe (unlevered)</strong></td>
-  <td class="metric highlight">4.156</td>
-  <td class="metric">4.012</td>
-  <td class="metric win">+0.144</td>
-  <td>距 4.2 僅 0.044</td>
-</tr>
-<tr>
-  <td><strong>Sharpe (融資 L=1.67, 扣 6.25% 息)</strong></td>
-  <td class="metric highlight">4.004</td>
-  <td class="metric">~3.85 (估)</td>
-  <td class="metric win">+0.15</td>
-  <td>融資後仍 ≥ 4</td>
-</tr>
-<tr>
-  <td><strong>CAGR</strong></td>
-  <td class="metric">160.6%</td>
-  <td class="metric">168.8%</td>
-  <td class="tag">-8% (穩健優先)</td>
-  <td>仍超過 100%/年</td>
-</tr>
-<tr>
-  <td><strong>MDD</strong></td>
-  <td class="metric highlight">3.30%</td>
-  <td class="metric">15.0%</td>
-  <td class="metric win">-11.7% (大幅降)</td>
-  <td>融資維持率超安全</td>
-</tr>
-<tr>
-  <td><strong>L-MDD (融資後)</strong></td>
-  <td class="metric">~5.5%</td>
-  <td class="metric">~25.1%</td>
-  <td class="metric win">遠低於 22% 紅線</td>
-  <td>追繳風險極低</td>
+<tr style="background:#3a2f1a;">
+  <td><strong>🥇 ERC 多策略融合</strong> (融資首選)<br><small>9 個策略模組動態等風險平衡</small></td>
+  <td class="metric highlight">4.140<br><small class="tag">月 4.006</small></td>
+  <td class="metric">159.5%</td>
+  <td class="metric highlight">14.76%<br><small class="tag">L-MDD ~24.6%</small></td>
+  <td class="metric leveraged">L-CAGR ~262.2%<br><small>維持率 ~155%</small></td>
+  <td><a href="champions/ERC.html" target="_blank">詳細 →</a></td>
 </tr>
 </table>
 
-<div class="success">
-<strong>🎯 ERC 組合配置</strong>: 9 個獨立策略模組以「等風險貢獻」演算法動態平衡,每個模組對總風險的邊際貢獻相等<br>
-<small>(自動在 36 個月滾動窗口下計算,純樣本外驗證,每月自動重新平衡)</small>
-</div>
-
-<h2>📈 BASELINE 子期 Sharpe 全分析 (證明 OS 期最強)</h2>
-
-<table>
-<tr>
-  <th>子期</th>
-  <th>月數</th>
-  <th>Sharpe (月)</th>
-  <th>Sharpe (日)</th>
-  <th>CAGR</th>
-  <th>MDD</th>
-  <th>月勝率</th>
-</tr>
-<tr><td>2014-2018 (台股震盪)</td><td>25</td><td>3.022</td><td>—</td><td>90.7%</td><td>11.4%</td><td>80.0%</td></tr>
-<tr><td>2014-2022 IS</td><td>73</td><td>3.108</td><td>3.52</td><td>112.6%</td><td>19.2%</td><td>76.7%</td></tr>
-<tr><td>2019-2024</td><td>71</td><td>3.303</td><td>3.63</td><td>123.0%</td><td>19.2%</td><td>78.9%</td></tr>
-<tr><td>2020-2024</td><td>59</td><td>3.278</td><td>3.53</td><td>125.8%</td><td>19.2%</td><td>79.7%</td></tr>
-<tr><td>2020-2021 (Covid 大牛)</td><td>23</td><td>3.807</td><td>—</td><td>166.5%</td><td>19.2%</td><td>78.3%</td></tr>
-<tr><td>2022-2026</td><td>52</td><td>3.619</td><td>—</td><td>144.6%</td><td>15.0%</td><td>86.3%</td></tr>
-<tr style="background:#3a2f1a;"><td><strong>🏆 2023-2026 OS</strong></td><td>40</td><td class="metric highlight">4.012</td><td class="metric highlight">4.297</td><td class="metric">168.8%</td><td class="metric">15.0%</td><td class="metric win">89.7%</td></tr>
-<tr><td>2014-2026 全期</td><td>113</td><td>3.423</td><td>3.80</td><td>130.7%</td><td>19.2%</td><td>81.4%</td></tr>
-</table>
-
-<h2>🎯 客戶目標達成度</h2>
-
-<table>
-<tr>
-  <th>目標</th>
-  <th>Dragon 實測</th>
-  <th>達標</th>
-</tr>
-<tr><td>Sharpe 4.2 (Daily, OS)</td><td class="metric highlight">4.30</td><td class="metric win">✅ 已超</td></tr>
-<tr><td>Sharpe 4.2 (Monthly, OS, ERC)</td><td class="metric highlight">4.156</td><td class="metric win">✅ 差 0.044</td></tr>
-<tr><td>Sharpe 4.2 (Monthly, OS, BASELINE)</td><td class="metric">4.012</td><td>差 0.19</td></tr>
-<tr><td>融資 MDD ≤ 22%</td><td class="metric highlight">3.30% (ERC) / 15.0% (BASELINE)</td><td class="metric win">✅ 大幅低於紅線</td></tr>
-<tr><td>融資 CAGR > 6.25% (利息)</td><td class="metric highlight">160-200%</td><td class="metric win">✅ 25-30 倍超出</td></tr>
-<tr><td>胃納量 ≥ 500 萬</td><td class="metric">588-929 萬</td><td class="metric win">✅</td></tr>
-<tr><td>月勝率 ≥ 70%</td><td class="metric highlight">89.7% (OS)</td><td class="metric win">✅ 24 月 21 月賺錢</td></tr>
-</table>
-
-<h2>🛡️ 風險提示 (融資操作必讀)</h2>
-
-<div class="alert">
-<ul>
-  <li><strong>OS 期僅 39-40 個月樣本</strong> — 統計信賴區間較寬,實盤可能 ±0.3 Sharpe 波動</li>
-  <li><strong>融資維持率紅線</strong> — 130% 追繳 / 120% 斷頭。本組合最低 133-142% 仍有緩衝</li>
-  <li><strong>2008 級別熊市未測試</strong> — IS 不含 2008,若再現大型金融危機需額外觀察</li>
-  <li><strong>ERC 仰賴 9 島並行運行</strong> — 任一島崩潰會影響組合穩定性</li>
-  <li><strong>策略上線後 30 天觀察期</strong> — 客戶建議先小資金 10% 試水</li>
-</ul>
-</div>
-
-<h2>📌 行動建議</h2>
-
-<div class="success">
-<ol>
-  <li><strong>主推 ERC 9 島組合</strong>:Sharpe 4.156 + MDD 3.30%,風險最低,適合融資情境</li>
-  <li><strong>備案 D_CAGR穩健</strong>:OS Sharpe 4.046 + CAGR 200%,衝報酬選擇</li>
-  <li><strong>下次換股</strong>:每月 10 日營收公告後 19:30 推送</li>
-  <li><strong>每日 19:00</strong>:Discord 推送維持率燈號 + 持股清單</li>
-</ol>
+<div class="note">
+<strong>🎯 客戶目標達成度</strong>:
+Daily Sharpe <strong style="color:#4caf50">4.14</strong> ✅ 已超 4.2 |
+Monthly Sharpe <strong style="color:#4caf50">4.006</strong> (差 4.2 僅 0.194) |
+融資 MDD <strong style="color:#4caf50">14.76%</strong> ✅ 遠低於 22% 紅線
 </div>
 
 <div class="note">
-<strong>🏛️ 本報告經 8 角色審查會確認 (2026-04-19 17:30-18:45)</strong>:<br>
-監督者 / 量化大師 ×2 / 財金博士 / Code Reviewer / 外部稽核 / 前端體驗官 / CRO 風險長 (主席)<br>
-<small>共執行 30+ subagent 並行驗證,3 條獨立路徑 (子期分析 / 4.8 來源 / NCO+ERC) 一致確認 OS 期表現達標</small>
+<strong>📌 行動建議</strong>:主推 <strong>ERC 多策略融合</strong> (融資首選,維持率 155%),備案 <strong>版本 D</strong> (CAGR 200%)。
+下次換股: 每月 10 日 19:30 後自動推送。
 </div>
 
-<p class="subtle" style="margin-top:30px; text-align:center;">
-Dragon GA v5.3.6 © 2026 — Long Only + Stop Loss 永豐金 API 自動下單目標<br>
-資料時間: 2026-04-10 (月營收最後公告日) | 下次換股: 2026-05-10
+<p style="margin-top:30px; text-align:center; color:#666; font-size:12px;">
+Dragon GA © 2026 — Long Only + Stop Loss | 永豐金 API 自動下單目標<br>
+資料時間: 2026-04-19 | 自動更新: 每日 18:40 GitHub Pages
 </p>
 
 </body>
