@@ -77,7 +77,7 @@ ERC 組合更達 4.156</strong>。實盤上線後將以 OS 期數字為準。
 </tr>
 
 <tr>
-  <td><strong>D_CAGR穩健</strong> 🏆<br><small>4-island+trend+top7+posL=0.5</small></td>
+  <td><strong>版本 D</strong> 🏆 CAGR 穩健型<br><small>多策略融合 + 趨勢過濾 + 7 支集中持股</small></td>
   <td class="metric highlight">4.046<br><small class="tag">月 3.32 / 全期 3.59</small></td>
   <td class="metric">200.2%<br><small class="tag">扣息 187%</small></td>
   <td class="metric">15.11%<br><small class="tag">L-MDD 23.5%</small></td>
@@ -87,7 +87,7 @@ ERC 組合更達 4.156</strong>。實盤上線後將以 OS 期數字為準。
 </tr>
 
 <tr>
-  <td><strong>C_W26主力</strong> 🥈<br><small>W26×0.6+W28×0.3+W25×0.1+top20+IndCap10%</small></td>
+  <td><strong>版本 C</strong> 🥈 CAGR 優先型<br><small>多策略融合 + 產業分散 + 20 支持股</small></td>
   <td class="metric highlight">4.004<br><small class="tag">月 3.48 / 全期 3.67</small></td>
   <td class="metric">172.7%<br><small class="tag">扣息 159%</small></td>
   <td class="metric">16.10%<br><small class="tag">L-MDD 24.4%</small></td>
@@ -97,7 +97,7 @@ ERC 組合更達 4.156</strong>。實盤上線後將以 OS 期數字為準。
 </tr>
 
 <tr>
-  <td><strong>A_Sharpe穩健</strong> 🥉<br><small>4-island+trend+top20+IndCap10%+trail=0.3</small></td>
+  <td><strong>版本 A</strong> 🥉 Sharpe 穩健型<br><small>多策略融合 + 趨勢過濾 + 分散 20 支 + 風控停損</small></td>
   <td class="metric highlight">3.971<br><small class="tag">月 3.52 / 全期 3.63</small></td>
   <td class="metric">167.4%<br><small class="tag">扣息 154%</small></td>
   <td class="metric">15.27%<br><small class="tag">L-MDD 20.3%</small></td>
@@ -107,7 +107,7 @@ ERC 組合更達 4.156</strong>。實盤上線後將以 OS 期數字為準。
 </tr>
 
 <tr>
-  <td><strong>B_CAGR激進</strong><br><small>4-island+trend+top5+posL=0.5</small></td>
+  <td><strong>版本 B</strong> CAGR 激進型<br><small>多策略融合 + 趨勢過濾 + 集中 5 支重壓</small></td>
   <td class="metric highlight">3.959<br><small class="tag">月 3.16 / 全期 3.51</small></td>
   <td class="metric win">218.4%<br><small class="tag">扣息 205%</small></td>
   <td class="metric">17.00%<br><small class="tag">L-MDD 22.8%</small></td>
@@ -166,9 +166,8 @@ ERC 組合更達 4.156</strong>。實盤上線後將以 OS 期數字為準。
 </table>
 
 <div class="success">
-<strong>🎯 ERC 組合配置 (9 島平等風險貢獻)</strong>:
-W20 11% / W23 12% / W24 10% / W25 12% / W26 11% / W27 11% / W28 11% / W29 12% / W30 11%<br>
-<small>(自動由 NCO+ERC 演算法在 walk-forward 36 月窗口下計算,純 OS 驗證)</small>
+<strong>🎯 ERC 組合配置</strong>: 9 個獨立策略模組以「等風險貢獻」演算法動態平衡,每個模組對總風險的邊際貢獻相等<br>
+<small>(自動在 36 個月滾動窗口下計算,純樣本外驗證,每月自動重新平衡)</small>
 </div>
 
 <h2>📈 BASELINE 子期 Sharpe 全分析 (證明 OS 期最強)</h2>
